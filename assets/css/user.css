@@ -1,0 +1,354 @@
+:root {
+    --header-height: 3rem;
+    /* COLORS */
+    --main-color: #1D2521;
+    --secondary-color:#6c63ff;
+    /* --text-color: #C7D1CC; */
+    --text-color: #1D2521;
+    --fav:rgba(148, 148, 148,0.1);
+}
+
+body {
+    color: var(--main-color);
+}
+
+    /* ORDERS STYLING */
+.orders-container {
+    /* background-color: #af2; */
+    width: 100%;
+    margin-top: calc(var(--header-height) + 20px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-header {
+   padding: 10px;
+   margin-bottom: 15px;
+}
+
+.order-header h2 {
+    padding-left: 100px;
+}
+
+.no-ordr-txt {
+    padding: 25px;
+    margin-left: 30px;
+    font-size: 1.1rem;
+    color: rgba(148, 148, 148,0.6);
+}
+
+.sad-svg {
+    display: block;
+    width: 120px;
+    padding: 20px;
+    margin-left: 120px;
+    opacity: 0.15;
+}
+
+.orders-details {
+    position: relative;
+    width: 525px;
+    padding: 10px 15px;
+    margin-left: 120px;
+    margin-bottom: 20px;
+    border: 1px solid #eaebeb;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+}
+
+.ordr-name {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.cancel-icon {
+    position: absolute;
+    top: 7px;
+    right: 5px;
+}
+
+.ordr-date {
+    font-size: 0.85rem;
+    color: rgba(32, 8, 8, 0.5);
+}
+
+.ordr-price {
+    font-size: 1.6rem;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+
+.orders-svg-block {
+    /* background-color: #000; */
+    width: 400px;
+    margin-top: 90px;
+    margin-right: 170px;
+    margin-bottom: 20px;
+}
+
+.delivery-svg {
+    width: 100%;
+}
+
+    /* todo = LOGIN STYLING */
+.login-container {
+    width: 100%;
+    margin-top: calc(var(--header-height) + 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-svg-block {
+    width: 300px;
+    padding-top: 20px;
+}
+
+.welcome-svg {
+    width: 100%;
+}
+
+.login-block {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    padding: 15px 26px 45px 26px;
+    margin-bottom: 60px;
+}
+
+.error-msg {
+    color: rgba(238, 75, 43,.8);
+}
+
+.suxs-msg {
+    color:green;
+}
+
+.login-block, .login-details input {
+    border: 1px solid #eaebeb;
+    border-radius: 5px;
+}
+
+.login-text {
+    margin-bottom: 20px;
+}
+
+
+.login-details {
+    /* background-color: #2ff; */
+    display: flex;
+    flex-direction: column;
+}
+
+.login-details input[type=text], .login-details input[type=password] {
+    display: block;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.login-details input[type=submit], .signup-details input[type=submit] {
+    padding: 10px 25px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    background-color: rgba(108, 99, 255,0.9);
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-details input:focus {
+    outline: none;
+    border: 2px solid rgb(108,99,255);
+}
+
+.create-acc-link {
+    font-size: .85rem;
+    margin-top: 10px;
+    padding-left: 25px;
+}
+
+.create-acc-link a {
+    color: rgb(108,99,255);
+    text-decoration: underline;
+}
+
+    /* todo = SIGNUP STYLING */
+.signup-container {
+    margin-top: calc(var(--header-height) + 20px);
+    padding: 35px;
+    padding-left: 60px;
+    display: flex;
+    column-gap: 200px;
+}
+
+.signup-block {
+    border: 1px solid #eaebeb;
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.14);
+}
+
+.signup-text {
+    margin-bottom: 15px;
+}
+
+.account-icon {
+    position: relative;
+    top: 3px;
+    margin-left: 3px;
+}
+
+.s-uname {
+    grid-area: uname;
+}
+
+.s-fname {
+    grid-area: fname;
+}
+
+.s-lname {
+    grid-area: lname;
+}
+
+.s-email {
+    grid-area: email;
+}
+
+.s-phone {
+    grid-area: phone;
+}
+
+.s-pass {
+    grid-area: pass;
+}
+
+.s-cpass {
+    grid-area: cpass;
+}
+
+.s-addr {
+    grid-area: addr;
+}
+
+.signup-details {
+    font-size: 0.93rem;
+    display: grid;
+    grid-template-areas: "uname uname"
+                         "fname lname"
+                         "email phone"
+                         "pass cpass"
+                         "addr addr";
+    row-gap: 10px;
+    column-gap: 40px;
+}
+
+.signup-details input, .signup-details textarea{
+    display: block;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #eaebeb;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.01);
+}
+
+.signup-details input:focus, .signup-details textarea:focus {
+    outline: none;
+    border: 2px solid rgb(108,99,255);
+}
+
+.signup-details textarea {
+    margin-bottom: 20px;
+    resize: none;
+}
+
+.signup-svg-block {
+    width: 450px;
+    margin-top: 100px;
+}
+
+.svg {
+    width: 100%;
+}
+
+        /* todo = CONTACT STYLING */
+.main-flex {
+    display: flex;
+    gap: 50px;
+}
+
+.form-container {
+    border: 1px solid #eaebeb;
+    padding: 40px;
+    padding-top: 10px;
+    margin: calc(3rem + 50px);
+    margin-bottom: 50px;
+    width: 700px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.14);
+}
+
+.form-h2 {
+    padding-bottom: 20px;
+}
+
+.input-row {
+    margin-bottom: 20px;
+}
+
+.input-row label {
+    color: #75726c;
+}
+
+.input-field, .txt-area-field {
+    width: 70%;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #eaebeb;
+    margin-top: 2px;
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
+.txt-area-field {
+    width: 90%;
+    resize: none;
+}
+
+.span-field {
+    font: Arial;
+    font-size: small;
+    text-decoration: none;
+}
+
+.form-container input:focus, .form-container textarea:focus {
+    outline: none;
+    border: 2px solid rgb(108,99,255);
+}
+
+.btn-submit {
+    padding: 10px 55px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    background-color: rgba(108, 99, 255,0.9);
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #eaebeb;
+    border-radius: 5px;
+}
+
+.info {
+    font-size: .8em;
+    color: #e66262;
+    letter-spacing: 2px;
+    padding-left: 5px;
+}
+
+.contact-svg-block {
+    width: 400px;
+    margin-top: calc(3rem + 200px);
+
+}
+
+.contact-svg {
+    width: 100%;
+}

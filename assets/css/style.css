@@ -1,0 +1,633 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+    --header-height: 3rem;
+    /* COLORS */
+    --main-color: #1D2521;
+    --secondary-color: #6c63ff;
+    /* --text-color: #C7D1CC; */
+    --text-color: #1D2521;
+  
+  
+}
+* ,::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+    /* todo = HEADER STYLING */
+.header {
+    background-color: #f4f4f4;
+    /* background-color: rgba(148, 148, 148,0.1); */
+    /* background-image: url(../images/menu-bg.jpg); */
+    width: 100%;
+    padding:10px 0;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 500;
+}
+
+.hdr-container {
+    /* background: red; */
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-logo {
+    /* background: pink; */
+    width: 30%;
+    height: var(--header-height);
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+.main-logo  p{
+    color: var(--text-color);
+    font-family: 'Bangers', cursive;
+    cursor: default;
+}
+
+.spoon-icon {
+    color: var(--text-color);
+
+}
+
+.nav {
+    /* background: yellow; */
+    width: 30%;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-list {
+    list-style-type: none;
+    /* background: green; */
+    width: 100%;
+    height: var(--header-height);
+    line-height: var(--header-height);
+    text-align: center;
+    font-size: 1rem;
+}
+
+.nav-list > a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.nav-list > a:hover {
+    color: var(--secondary-color);
+}
+
+.logout-icon {
+    position: relative;
+    top: 2px;
+    margin-left: 2px;
+}
+
+@media only screen and (max-width: 450px) {
+    body {
+      background-color: lightblue;
+    }
+    
+    :root {
+        --header-height :2.5rem;
+    }
+
+    .main-logo {
+        width: 100%;
+        font-size: 2rem;
+    }
+    .nav {
+        display: none;
+    }
+  }
+
+
+    /* todo = BANNER STYLING */
+.home-container {
+    /* background-image: url(../images/asknzD.jpg); */
+    background-color: rgba(148, 148, 148,0.1);
+    width: 100%;
+    min-height: 80vh;
+    margin-top: calc(var(--header-height) + 20px);    /* 20px is padding of header */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner-details {
+    /* background-color: yellowgreen; */
+    padding: 1em;
+}
+
+.main-title,.sub-title {
+    color: var(--text-color);
+}
+
+.main-title {
+    font-size: 2.8em;
+}
+
+.sub-title {
+    font-size: 2.2em;
+}
+
+.home-btn {
+    margin-top: 20px;
+    margin-left: 70px;
+}
+
+.home-btn a {
+    background-color: var(--secondary-color);
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.home-btn a:hover {
+    background-color: var(--main-color);
+}
+
+.banner-svgs {
+    /* background: pink; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+}
+
+.svg-wh1, .svg-wh2, .svg-wh3 {
+    width: 42px;
+    height: 42px;
+}
+
+.svg1 {
+    position: relative;
+    left: 40px;
+}
+
+.svg2 {
+    position: relative;
+    right: 25px;
+}
+
+.svg1::after ,.svg2::after , .svg3::after {
+    display: block;
+    color: gray;
+    margin-top: 10px;
+}
+
+.svg1::after {
+    content: 'Choose Restaurant';
+    position: relative;
+    right: 20px;
+}
+
+.svg2::after {
+    content: 'Order';
+}
+
+.svg3::after {
+    content: 'Delivery';
+}
+
+
+.arrow1 , .arrow2 {
+    position: relative;
+    top:-10px;
+}
+
+.arrow1 {
+    right: 40px;
+    width: 130px;
+    height: 32px;
+}
+
+.arrow2 {
+    height: 25px;
+}
+
+.home-image {
+    max-width: 500px;
+}
+
+@media only screen and (max-width: 450px) {
+    .home-container {
+        min-height: 70vh;
+    }
+
+    .banner-details {
+    order: 2;
+    }
+
+    .main-title {
+        font-size: 1.8em;
+    }
+    
+    .sub-title {
+        font-size: 1.5em;
+    }
+
+    .home-btn {
+        margin-top: 30px;
+        margin-left: 0;
+    }
+
+    .home-btn a {
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 0.85rem;
+    }
+
+    .banner-svgs {
+        margin-top: 70px;
+    }
+
+    .svg-wh1, .svg-wh2, .svg-wh3 {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .svg1::after ,.svg2::after , .svg3::after {
+       font-size: 0.75rem;
+       margin-top: 5px;
+    }
+
+    .svg1::after {
+        right: 15px;
+    }
+
+    .svg1 {
+        left: 10px;
+    }
+
+    .arrow1 , .arrow2 {
+        top: 0;
+    }
+    
+    .arrow1 {
+        right: 45px;
+        width: 80px;
+        height: 12px;
+    }
+    
+    .arrow2 {
+        height: 15px;
+        right: 10px;
+    }
+
+    .banner-image {
+        order: 1;
+    }
+    
+
+    .home-image {
+        max-width: 330px;
+    }
+
+}
+
+    /* todo = TRENDING SECTION STYLING */
+.trend-container {
+    padding: 15px 140px 140px 140px;
+}
+
+.trend-header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    color: #1D2521;
+}
+
+.trend-icon {
+    color: rgb(116, 115, 115);
+}
+
+.trend-subtitle {
+    position: relative;
+    top: 2px;
+    left: 17px;
+    font-size: 0.90rem;
+    color: rgb(134, 132, 132);
+}
+
+.card {
+    background-color: #fbfefd;
+    width:200px;
+    border-radius: 10px;
+    box-shadow: rgba(3, 74, 40, 0.15) 0px 2px 4px 0px;
+    overflow: hidden;
+}
+
+.card-image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 170px;
+}
+
+.c1 {
+    background-image: url(../images/PngItem_972887.png);
+}
+
+.c2 {
+    background-image: url(../images/naturals.jpg);
+}
+
+.c3 {
+    background-image: url(../images/pizzahut.jpg);
+}
+
+.c4 {
+    background-image: url(../images/mcburger.png);
+}
+
+.c5 {
+    background-image: url(../images/biryani.jpg);
+}
+
+.c6 {
+    background-image: url(../images/sitphlice.jpg);
+}
+
+
+.dish-name {
+    color: #1D2521;
+    padding-top: 8px;
+    padding-left: 30px;
+    font-size: 0.90rem;
+    font-weight: bold;
+}
+
+.rating {
+    color: #fff;
+    background-color: #069650;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: rgba(3, 74, 40, 0.15) 0px 2px 4px 0px;
+    
+}
+
+.rtng1 {
+    position: relative;
+    left: 10px;
+    padding: 2px 5px;
+    font-size: 0.80rem;
+}
+
+.star-icon {
+    position: relative;
+    top: 2px;
+}
+
+.price {
+    padding-left: 60px;
+    color: rgb(224, 26, 26);
+}
+
+.card-btn {
+    position: relative;
+    left: 22%;
+    padding: 10px 20px;
+    border: 2px dashed #1D2521;
+    background-color: transparent;
+    color: #1D2521;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.card-btn:hover {
+    border: 2px solid #1D2521;
+    background-color: #1D2521;
+    color: #fff;
+}
+
+@media only screen and (max-width: 450px) {
+    .trend-container {
+        padding: 0;
+    }
+
+    .trend-header {
+        gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 25px;
+        /* padding-left: 10px; */
+        color: #1D2521;
+    }
+
+}
+
+    /* todo = DOWNLOAD SECTION STYLING */
+.dwnld-container {
+    /* background-color: #f00; */
+    background-color: rgba(148, 148, 148,0.1);
+    width: 100%;
+    max-height: 550px;
+    overflow: hidden;
+}
+
+.dwnld-details {
+    /* background-color: #00f; */
+    position: relative;
+    left: 150px;
+    top: 100px;
+}
+
+.dwnld-title {
+    color: #1D2521;
+    width: 300px;
+    font-size: 2.5em;
+    line-height: 1.15em;
+}
+
+.dwnld-subtitle {
+    width: 450px; 
+    color: rgb(124, 124, 124);
+    font-size: 1.05em;   
+    padding-top: 15px;
+    word-spacing: 0.15em;
+}
+
+.dwnld-stickers {
+    padding-top: 50px;
+}
+
+.app1 ,.app2 {
+    height: 54px;
+}
+
+.mockup-phones {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;   
+}
+
+.phone1,.phone2 {
+    position: relative;
+    width: 315px;
+}
+
+.phone1 {
+    top: -550px;
+   
+}
+
+.phone2 {
+    bottom: 150px;
+}
+
+/* todo = CONTACT US STYLING */
+.contact-container {
+    /* background-color: #f2f; */
+    width: 100%;
+    padding: 110px 50px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.contact-details {
+    /* background-color: #3ff; */
+    margin-left: 101px;
+}
+
+.contact-title {
+    color: #1D2521;
+    display: inline-block;
+    width: 320px;
+    font-size: 2.10em;
+}
+
+.help-icon {
+    position: relative;
+    color: var(--text-color);
+    top: 3px;
+    width: 30px;
+    height: 30px;
+}
+
+.contact-subtitle {
+    width: 600px;
+    color: rgb(124, 124, 124);
+    font-size: 1em;   
+    padding-top: 15px;
+    word-spacing: 0.15em;
+}
+
+.contact-button {
+    margin-top: 80px;
+    margin-left: 200px;
+
+}
+
+.contact-button a {
+    background-color: var(--secondary-color);
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.contact-button a:hover {
+    background-color: var(--main-color);
+}
+
+    /* todo = FOOTER STYLING */
+.footer {
+    /* background: url(../images/pattern.png); */
+    /* background-color: rgba(148, 148, 148,0.1); */
+    background-color: #f4f4f4;
+    width: 100%;
+}
+
+.footer-container {
+    /* background-color: #ff3; */
+    width: 90%;
+    margin-left: 80px;
+    /* margin-top: 100px; */
+    padding-top: 40px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-list {
+    /* background-color: #ff0ff1; */
+    line-height: 1.8em;
+}
+
+.list-header {
+    text-transform: uppercase;
+    list-style-type: none;
+    letter-spacing: 0.1em;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    color: var(--text-color);
+}
+
+.footer-list li {
+    list-style-type: none;
+}
+
+.footer-list li > a {
+    color: gray;
+}
+
+.list4-hdr {
+    padding-bottom: 5px;
+}
+
+.social-icons {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.app-store, .play-store {
+    height: 40px;
+}
+
+.social-icons > a {
+    color: #fff;
+}
+
+.si {
+    color: #1D2521;
+}
+
+.copyright {
+    /* background-image: url(../images/pattern.png); */
+    color: var(--text-color);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.git {
+    color: #6c63ff;
+    margin-left: 10px;
+}
